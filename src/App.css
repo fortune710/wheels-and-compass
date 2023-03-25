@@ -1,0 +1,97 @@
+:root {
+  --padding-horizontal: 0 8px;
+  --margin-vertical: 15px 0;
+  --font-dm: 'DM Sans', sans-serif;
+  --primary: #326789;
+}
+
+* {
+  /*
+  
+  border: 1px solid #121212;
+  */
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.page {
+  padding: var(--padding-horizontal);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.glass {
+  -webkit-backdrop-filter: saturate(100%) blur(10px);  
+  backdrop-filter: saturate(100%) blur(10px); 
+  z-index: 10;
+}
+
+
+.gap {
+  gap: 2em;
+}
+
+a, a:visited, a:active {
+  text-decoration: none;
+  color: #121212;
+}
+
+.alt-link {
+  font-family: var(--font-dm);
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+p, button{
+  font-family: 'Inter', sans-serif;
+}
+
+h2, h3 {
+  font-family: 'Roboto Mono', monospace;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+
+@media screen and (min-width: 800px) {
+  :root {
+    --padding-horizontal: 0 24px;
+    --margin-vertical: 56px 0;
+  }
+
+  .page {
+    padding-top: 75px;
+  }
+
+  .floating-menu {
+    display: none;
+  }
+
+  .gap {
+    gap: 4em;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  :root {
+    --padding-horizontal: 0 48px;
+  }
+}

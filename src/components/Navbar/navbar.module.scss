@@ -1,0 +1,41 @@
+
+.navbar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--padding-horizontal);
+    box-sizing: border-box;
+    height: 70px;
+}
+
+
+
+.links {
+    display: inherit;
+    justify-content: space-between;
+    align-items: center;
+    gap: 18px;
+    font-family: 'Inter', sans-serif;
+
+    a, a:visited, a:active {
+        color: #121212;
+        text-decoration: none;
+    }
+
+}
+
+.button {
+    font-family: 'Inter', sans-serif;
+}
+
+
+@media screen and (min-width: 800px) {
+    .menuBtn {
+        display: none;
+    }
+
+    .navbar {
+        display: flex;
+    }
+}

@@ -1,0 +1,272 @@
+@mixin flex-row {
+    display: flex;
+    align-items: center;
+}
+
+.section {
+    padding: var(--padding-horizontal);
+    margin: var(--margin-vertical);
+}
+
+
+.typeAnimation {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 2.25em;
+    margin: 25px 0;
+}
+
+
+
+.greeting {
+    --font-large: 25px;
+    --font-medium: 20px;
+
+    height: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2em;
+
+    h2 {
+        //font-family: var(--font-dm);
+        font-size: var(--font-large);
+    }
+    p {
+        font-family: var(--font-dm);
+        font-size: var(--font-medium);
+    }
+    h2, p { margin: 0; }
+}
+
+.greeting div {
+    * {
+        margin: 10px 0;
+    }
+}
+
+.expandMore {
+    font-family: var(--font-dm);
+    h5 { margin: 0; }
+    animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+.moreBtn {
+    width: 100%;
+    margin-top: 50px !important;
+}
+
+.landing {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    color: #fff;
+    height: 105vh;
+    background-image: linear-gradient(0deg, rgba(4, 4, 4, 0.546), rgba(4, 4, 4, 0.48));
+}
+
+.landing .landingBackground {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    object-fit: cover;
+    object-position: center;
+}
+
+.landing nav {
+    width: 100%;
+    @include flex-row;
+    justify-content: space-between;
+    padding: var(--padding-horizontal);
+
+    div {
+        display: none
+    }
+}
+
+.contactBtn {
+    background: none;
+    border: none;
+    outline: 2px solid #fff;
+    border-radius: 8px;
+    padding: 0.5em 1em;
+    color: #fff;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+.fixedHeader {
+    -webkit-backdrop-filter: saturate(100%) blur(10px);  
+    backdrop-filter: saturate(100%) blur(10px); 
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    @include flex-row();
+    justify-content: space-between;
+    padding: var(--padding-horizontal);
+    box-sizing: border-box;
+    height: 70px;
+}
+
+.glass {
+    -webkit-backdrop-filter: saturate(100%) blur(10px);  
+    backdrop-filter: saturate(100%) blur(10px); 
+    z-index: 10;
+}
+
+.introSection {
+    @include flex-row();
+    flex-direction: column;
+    padding: var(--padding-horizontal);
+}
+
+.introSection img {
+    width: 100%;
+}
+
+.testimonial {
+    min-height: 250px;
+}
+
+.testimonial h2 {
+    font-family: var(--font-dm);
+}
+
+.conclusion {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.conclusion div {
+    position: relative;
+    height: 200px;
+    width: 100%;
+
+    img {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        border-radius: 12px;
+    }
+
+    .imageDecorator {
+        width: 100%;
+        height: 100%;
+        border-radius: 12px;
+        background-color: var(--primary);
+        z-index: -1;
+        position: absolute;
+        transform: rotate(3deg);
+    }
+}
+
+
+@media screen and (max-width: 799px) {
+    .landing nav {
+        height: 70px;
+        padding: var(--padding-horizontal);
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .landing {
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .landing nav {
+        @include flex-row;
+        justify-content: space-between;
+        padding-top: 10px;
+    
+        div {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 2em;
+        }
+
+        a:not(.button) {
+            color: #fff;
+            text-decoration: none;
+            padding: 0 10px;
+            font-family: var(--font-dm);
+            font-weight: 500;
+            border-radius: 8px;
+        }
+
+        a:not(.button):hover {
+            background-color: #fff;
+            color: #000;
+            //filter: brightness(0.8);
+        }
+    }
+
+    .conclusion {
+        grid-template-columns: 60% 40%;
+
+        h3 {
+            margin: auto 0;
+        }
+    }
+
+    .conclusion div:not(.imageDecorator) {
+        padding: 2em;
+        box-sizing: border-box;
+    }
+
+    .testimonial {
+        min-height: 400px;
+    }
+
+    .conclusion div {
+        aspect-ratio: 1;
+        min-height: 400px;
+    }
+
+
+    .introSection {
+        flex-direction: row;
+    }
+
+    .moreBtn {
+        width: 350px;
+    }
+
+    .greeting{
+        --font-large: 3.125rem;
+        --font-medium: 1.875rem;
+
+        h2, p {
+            margin: 20px 0;
+        }
+    }
+
+    .slideshow {
+        height: 350px;
+    }
+
+    .floatingMenu {
+        display: none;
+    }
+}

@@ -1,0 +1,84 @@
+.page {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.page section {
+    margin: 40px 0;
+}
+
+.page button {
+    height: 50px;
+    width: 100%;
+    border-radius: 5px;
+    border: 0;
+    background-color: #121212;
+    color: #fff;
+    margin: 20px 0;
+}
+
+.page input {
+    margin: 10px 0;
+}
+
+.page :is(h1, h2, p) {
+    font-family: var(--font-dm);
+}
+
+.page h5 {
+    font-family: 'Roboto Mono', monospace;
+}
+
+.page :is(p, h5) {
+    margin: 10px 0;
+}
+
+.iconHolder {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    box-shadow: 0px 1px 3px 1px #a7a7a7;
+}
+
+.point {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 20px;
+    h2 { margin: 0; }
+}
+
+@media screen and (min-width: 768px) {
+    .page input {
+        //margin: 20px 0;
+    }
+}
+
+@media screen and (min-width: 768px) and (orientation: landscape) {
+    .page {
+        display: grid;
+        grid-template-columns: 30% 70%;
+    }
+
+    .page section {
+        margin: 0;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .page {
+        display: grid;
+        grid-template-columns: 30% 70%;
+    }
+
+    .page section {
+        margin: 0;
+
+        h1 {
+            margin-top: 0 !important;
+        }
+    }
+}

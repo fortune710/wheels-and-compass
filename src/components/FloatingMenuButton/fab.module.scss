@@ -1,0 +1,20 @@
+circle {
+    stroke-dashoffset: 0;
+    stroke-width: 15%;
+    fill: none;
+}
+
+.bg {
+    stroke: #fff;
+    opacity: 0.3;
+}
+  
+#progress .indicator {
+    stroke: #fff;
+}
+
+@media screen and (max-width: 800px) {
+    .scrollProgress {
+        display: none;
+    }
+}

@@ -1,0 +1,14 @@
+.button {
+    all: unset;
+    display: flex;
+    align-items: center !important;
+    font-family: var(--font-dm) !important;
+    transition: all 0.3s ease-in-out;
+    padding: 0.5em 0.85em !important;
+    border-radius: 12px !important; 
+}
+
+.button:hover {
+    background-color: #121212 !important;
+    color: #fff !important;
+}
