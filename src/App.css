@@ -62,7 +62,8 @@ p, button{
 }
 
 h2, h3 {
-  font-family: 'Roboto Mono', monospace;
+  //font-family: 'Roboto Mono', monospace;
+  font-family: var(--font-dm);
 }
 
 ul {

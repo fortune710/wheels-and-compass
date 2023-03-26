@@ -35,9 +35,7 @@ export const HomePage: React.FC = () => {
             <nav className={styles.fixedHeader}>
                 <img src={Logo} alt="Wheels and Compass Logo"/>
 
-                <button className={styles.contactBtn}>
-                    Get in Touch
-                </button>        
+                <GetInTouchButton/>       
             </nav>
         </header>
 
@@ -55,7 +53,7 @@ export const HomePage: React.FC = () => {
                     </Link>
                 </div>    
 
-                <GetInTouchButton/>   
+                <GetInTouchButton textColor='#fff'/>   
             </nav>
 
             <img 

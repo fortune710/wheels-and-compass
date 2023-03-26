@@ -18,7 +18,7 @@
 
 
 .greeting {
-    --font-large: 25px;
+    --font-large: 28px;
     --font-medium: 20px;
 
     height: 100%;
@@ -28,6 +28,7 @@
     justify-content: space-around;
     align-items: center;
     gap: 2em;
+    padding: 0 20px;
 
     h2 {
         //font-family: var(--font-dm);

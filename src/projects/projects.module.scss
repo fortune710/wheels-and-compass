@@ -22,10 +22,11 @@
 
 .project div {
     position: absolute;
-    width: 80%;
-    bottom: 15px;
+    width: 100%;
+    bottom: 0;
     left: 50%;
     transform: translateX(-50%);
+    border-radius: 0 0 12px 12px;
 }
 
 .project .hiddenContent {

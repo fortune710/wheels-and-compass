@@ -1,11 +1,14 @@
 import { ChevronRight } from "@mui/icons-material"
-import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import styles from './styles.module.scss';
 
-export const GetInTouchButton = () => {
+interface Props {
+    textColor?: string;
+}
+export const GetInTouchButton: React.FC<Props> = ({ textColor }) => {
     return (
         <Link
+            style={{ color: textColor }}
             to="/contact"
             className={styles.button}
         >
